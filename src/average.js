@@ -35,7 +35,6 @@ const average = (arr) => {
     soma += arr[i];
     divide = soma / arr.length;
 }
-// let resultado = divide > 0 ? Math.floor(divide) : Math.ceil(divide);
 let resultado = corrigeResultado(divide);
 if (Number.isNaN(resultado) === true) {
   resultado = undefined;
