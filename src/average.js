@@ -11,8 +11,38 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+const corrigeResultado = (number) => {
+  let resultado = 0;
+  let calculo1 = Math.abs(number);
+  let calculo2 = Math.floor(calculo1) + number;
+if (number > 0) {
+  resultado = Math.floor(number);
+} else if (calculo2 < -0.5) {
+  resultado = Math.floor(number);
+} else if (calculo2 > -0.5) {
+  resultado = Math.ceil(number);
+}
+return (resultado);
+};
 
-const average = () => {  
+const average = (arr) => {
+  let soma = arr[0];
+  let divide = soma / arr.length;
+   for (let i = 1; i < arr.length; i += 1) {
+    if (typeof (arr[i]) !== 'number') {
+      return (undefined);
+    }
+    soma += arr[i];
+    divide = soma / arr.length;
+}
+// let resultado = divide > 0 ? Math.floor(divide) : Math.ceil(divide);
+let resultado = corrigeResultado(divide);
+if (Number.isNaN(resultado) === true) {
+  resultado = undefined;
+} else if (typeof (soma) !== 'number') {
+  return (undefined);
+}
+return (resultado);
 };
 
 module.exports = average;
