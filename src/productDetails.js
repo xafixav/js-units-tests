@@ -40,11 +40,3 @@ const productDetails = (firstProduct, secondProduct) => [
 ];
 
 module.exports = productDetails;
-
-const product = productDetails('Alcool gel', 'Máscara');
-const product1 = Object.values(product);
-const product11 = product1[1].details;
-
-console.log(typeof (product1) === 'object');
-console.log(product1);
-console.log();
