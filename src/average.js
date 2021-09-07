@@ -22,6 +22,7 @@ if (number > 0) {
 } else if (calculo2 > -0.5) {
   resultado = Math.ceil(number);
 }
+
 return (resultado);
 };
 
