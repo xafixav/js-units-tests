@@ -99,7 +99,6 @@ const createMenu = (obj) => {
       let totalValue = 0;
       const { consumption, fetchMenu } = result;
       const menu = fetchMenu();
-      const menuPrices = Object.values(menu);
       const menuKeys = Object.keys(menu);
       for (let item of consumption) {
         totalValue += sumMenu({ menuKeys, menu, item, totalValue });
