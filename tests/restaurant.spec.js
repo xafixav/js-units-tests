@@ -113,7 +113,6 @@ describe('10 - Implemente os casos de teste e a função `createMenu`', () => {
     objectReturned.order('coxinha'); // 3.9
     const TOTAL_VALUE = 3.9 * 3;
     const payment = objectReturned.pay();
-    console.log(payment);
     assert(typeof payment === 'number', true);
     assert(payment === TOTAL_VALUE, true);
   });
